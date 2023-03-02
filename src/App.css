@@ -107,14 +107,14 @@ li{
   margin: 0 auto;
   width: 368px;
   height: 239px;
-  border-radius: 4px;
+  border-radius: 4px 4px 0 0;
   overflow: hidden;
 }
 
 .img{
   width: 82.5%;
   height: 93%;
-  border-radius: 4px;
+  border-radius: 4px 4px 0 0;
   background-size: cover;
   transition: transform 0.5s;
 }
