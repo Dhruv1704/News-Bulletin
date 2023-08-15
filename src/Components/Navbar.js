@@ -1,17 +1,20 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import DarkModeToggle from "react-dark-mode-toggle";
 
 const Navbar = (props) => {
 
     return (
-        <div className={"navbar"}>
-            <nav className="navbar" id={"nav"}>
-                <div className="title-div">
-                    <Link to="/" className="site-title">NEWS BULLETIN</Link>
+        <div className={"navbar"} id={"navbar"}>
+            <nav className={"nav"}>
+                <div className="site-title">
+                    NEWS BULLETIN
                 </div>
-                <div className="dark-div">
-                    <button type="button" className="dark-btn" id={"dark"} onClick={props.toggleMode}>{`Enable ${props.mode} Mode`}</button>
-                </div>
+                    <DarkModeToggle
+                        className={"dark-toggle"}
+                        onChange={props.toggleMode}
+                        checked={props.mode==="Dark"?true:false}
+                        size={80}
+                    />
             </nav>
         </div>
     );

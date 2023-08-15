@@ -8,10 +8,14 @@ const NewsCard = (props) => {
                 <img src={img} alt={"..."} className={"img"}/>
             </div>
             <div className={"card-body"}>
-                <h2>{title}</h2>
-                <p>{description ? description : "..."}</p>
-                <p><small>By {author ? author : "unknown"} on {new Date(date).toGMTString()}</small></p>
-                <a className={"btn"} href={url} target={"_blank"} rel={"noreferrer"}>Read More</a>
+                <div>
+                    <h3>{title}</h3>
+                    <p>{description ? description : "..."}</p>
+                    <p><small>By {author ? author : "unknown"} on {new Date(date).toGMTString()}</small></p>
+                </div>
+                <button className="button active:scale-95" id="add_button">
+                    <a className={"text"} href={url} target={"_blank"} rel={"noreferrer"}>Read More</a>
+                </button>
             </div>
         </div>
     );

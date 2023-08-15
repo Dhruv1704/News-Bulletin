@@ -1,199 +1,381 @@
-body{
-  font-family:  'Ubuntu', sans-serif;
-  margin: 0;
-  padding: 0;
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    background-color: #444;
 }
-
-h1{
- text-align: center;
+/*for burger menu to make unscrollable*/
+html, body{
+    height: 100vh;
 }
 
 .site-title {
-  text-decoration: none;
-  color: #5fd9fb;
-  font-size: 1.5em;
-  /*font-weight: lighter;*/
-  font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-self: center;
 }
 
-.navbar{
-  background: #20232a;
-  position: sticky;
-  z-index: 1;
-  top: 0;
+.navbar {
+    background: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    border-bottom: 1px solid rgba(60, 60, 67, .12);
 }
 
-#nav{
-  display: flex;
-  justify-content: space-between;
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0.75em 2em;
 }
 
-.title-div{
-  padding: 1.2em;
+.container{
+    padding-top: 3.5em;
 }
 
-.nav-item{
-  color: black;
-  margin-left: 1em;
-  text-decoration: none;
+.dark-toggle{
+    user-select: none;
+    margin-right: 2.5rem;
+    transform: scale(0.8);
 }
 
-li{
-  margin-top: 0.35em;
-  list-style:none;
+.nav-item {
+    color: grey;
+    margin-left: 1em;
+    text-decoration: none;
+}
+
+.menu-heading{
+    padding-top: 1em;
+}
+
+li {
+    margin-top: 0.35em;
+    list-style: none;
+}
+
+.button{
+    box-sizing: border-box;
+    margin: 1em 0.5em;
+    border: 3px solid black;
+    border-radius: 6px;
+    display: block;
+    width: 7.4em;
+    background: linear-gradient(to right, black 50%, white 50%) right bottom;
+    background-size: 200% 100%;
+    transition: background-position .5s ease-out;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-position: left bottom;
+}
+
+.text{
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    padding: 0.5em 0;
+    color: black;
+    transition: all .6s ease-out;
+    display: block;
+}
+
+.button:hover .text{
+    color:white;
+}
+
+.dark-button{
+    box-sizing: border-box;
+    margin: 1em 0.5em;
+    border: 2px solid white;
+    border-radius: 6px;
+    display: block;
+    width: 7.4em;
+    background: linear-gradient(to right, white 50%, black 50%) right bottom;
+    background-size: 200% 100%;
+    transition: background-position .5s ease-out;
+    cursor: pointer;
+}
+
+.dark-text{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    padding: 0.5em 0;
+    transition: all .6s ease-out;
+    display: block;
+}
+
+.dark-button:hover .dark-text{
+    color: black;
 }
 
 
-.dark-div{
-  padding: 1em;
+.dark-btn {
+    margin-right: 1em;
+    padding: 0.5em;
+    background: #2c2f31;
+    border: 2px solid #5fd9fb;
+    color: #5fd9fb;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1rem;
+}
+
+.dark-btn:hover {
+    background: #5fd9fb;
+    color: white;
+}
+
+.dark-btn:active {
+    transform: scale(1.1);
+}
+
+.heading{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 
-.dark-btn{
-  margin-right: 1em;
-  padding: 0.5em;
-  background: #2c2f31;
-  border: 2px solid #5fd9fb;
-  color: #5fd9fb;
-  border-radius: 6px;
-  cursor: pointer;
-  user-select: none;
-  font-size: 1rem;
+.card {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-radius: 6px 6px 0 0;
+    overflow: hidden;
+    width: 325px;
+    transition: transform 0.5s;
 }
 
-.dark-btn:hover{
-  background: #5fd9fb;
-  color: white;
+.card:hover {
+    transform: translateY(-10px);
 }
 
-.dark-btn:active{
-  transform: scale(1.1);
+.card-body {
+    padding: 0 1.5em 1em;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.btn{
-  text-decoration: none;
-  color: white;
-  background: #5fd9fb;
-  padding: 0.5em;
-  border-radius: 4px;
+.row {
+    padding: 1em 2em;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    justify-items: center;
+    row-gap: 50px;
 }
 
-.card{
-  box-shadow: 0 0  10px 8px #e5e5e6;
-  border-radius: 6px;
-  padding-bottom: 1em;
-  overflow: hidden;
-  width: 303px;
-  transition: transform 0.5s;
+.img-div {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 239px;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
 }
 
-.card:hover{
-  transform: translateY(-10px);
+.img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px 6px 0 0;
+    background-size: cover;
+    transition: transform 0.5s;
 }
 
-.card-body{
-  padding: 0  1.5em 1em;
+.spinner {
+    display: flex;
+    justify-content: center;
+    transform: scale(0.5);
 }
 
-.row{
-  padding-top: 1.2em;
-  display: grid;
-  grid-template-columns: repeat(auto-fill,303px);
-  justify-content: space-evenly;
-  grid-row-gap: 2em;
+.scroll-end {
+    text-align: center;
 }
 
-.img-div{
-  margin: 0 auto;
-  width: 368px;
-  height: 239px;
-  border-radius: 4px 4px 0 0;
-  overflow: hidden;
+#menu-button {
+    height: 60px;
+    width: 70px;
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    background: #1a1c22;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.img{
-  width: 82.5%;
-  height: 93%;
-  border-radius: 4px 4px 0 0;
-  background-size: cover;
-  transition: transform 0.5s;
-}
-.img:hover{
-  transform: scale(1.2);
-}
-
-.spinner{
-  display: flex;
-  justify-content: center;
+#menu-text {
+    position: absolute;
+    bottom: 20px;
+    right: 14px;
+    color: #5fd9fb;
+    font-weight: bold;
+    text-decoration: none;
+    user-select: none;
 }
 
-#menu-button{
-  height: 60px;
-  width: 70px;
-  position: fixed;
-  bottom: 10px;
-  right: 30px;
-  background: #1a1c22;
-  border-radius: 10px;
-  cursor: pointer;
+#menu {
+    padding-left: 1.5em;
+    font-size: 1.25rem;
+    display: none;
+    height: 92vh;
+    background: #f7f7f7;
 }
 
-#menu-text{
-  position: absolute;
-  bottom: 20px;
-  right: 14px;
-  color: #5fd9fb;
-  font-weight: bold;
-  text-decoration: none;
-  user-select: none;
+h3 {
+    margin-top: 0;
+    padding-top: 1.5em;
 }
 
-#menu{
-  padding-left: 1.5em;
-  font-size: 1.25rem;
-  display: none;
-  height: 92vh;
-  background: #f7f7f7;
+.dark {
+    background: #1d1f20 !important;
 }
 
-h3{
-  margin-top: 0;
-  padding-top: 1.5em;
+.dark-font-color {
+    color: white;
 }
 
-.dark{
-  background: #1d1f20!important;
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: white;
 }
 
-.dark-font-color{
-  color: white;
+::-webkit-scrollbar-thumb {
+    background: #aaaaaa;
+    border-radius: 10px;
 }
+
+::-webkit-scrollbar-thumb:hover {
+    background: gray;
+}
+
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 20px;
+    right: 36px;
+    top: 21px;
+    width: 30px;
+}
+
+.bm-burger-bars {
+    background: black;
+}
+
+
+#outer-container{
+    height: 100%;
+    overflow: hidden;
+}
+
+#page-wrap{
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+    margin-top: 0.5em;
+    position: relative;
+    left: 20px;
+    height: 24px;
+    width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+    background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+    overflow: hidden!important;
+    background: #373a47;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+    fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+    display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+    background: #303030;
+}
+
+@media (min-width: 768px) {
+    .row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .heading{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .row{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .heading{
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1536px) {
+    .row{
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
 
 @media screen and (min-width: 1053px) {
-  #menu-button{
-    display: none;
-  }
+    #menu-button {
+        display: none;
+    }
 
-  .container{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-areas:
-            "n n n m";
-  }
+    #news-div {
+        display: block !important;
+    }
 
-  #news-div{
-    display: block!important;
-    grid-area: n;
-  }
-
-  #menu {
-    display: block !important;
-    grid-area: m;
-    position: fixed;
-    right: 0;
-    left: 80%;
-    /*height: 99vh;*/
-  }
+    #menu {
+        display: block !important;
+        position: fixed;
+        right: 0;
+        left: 80%;
+        /*height: 99vh;*/
+    }
 }
 
 /*problems
