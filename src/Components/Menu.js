@@ -59,7 +59,7 @@ const Menu = (props) => {
                     <Link to={`/${props.country}/business`} className="nav-item " >Business</Link>
                 </li>
                 <li>
-                    <Link to={`/${props.country}/beauty`} className="nav-item " >Beauty</Link>
+                    <Link to={`/${props.country}/health`} className="nav-item " >Health</Link>
                 </li>
                 <li>
                     <Link to={`/${props.country}/science`} className="nav-item" >Science
