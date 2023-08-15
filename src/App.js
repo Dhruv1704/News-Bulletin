@@ -26,12 +26,14 @@ const App = () => {
     }
 
     const toggleMode = () => {
+        const themeColorMeta = document.getElementById('theme-color');
         const cards = document.getElementsByClassName("card");
         const menuBars = document.getElementsByClassName("bm-burger-bars")
         const btn = document.getElementsByClassName("button")
         const btnText = document.getElementsByClassName("text")
         if (mode === "Light") {
             setMode("Dark")
+            themeColorMeta.setAttribute('content', "#000000");
             document.getElementById("page-wrap").style.background = "#181a1b"
             document.getElementById("navbar").style.background = "black"
             document.body.style.color = "white"
@@ -47,6 +49,7 @@ const App = () => {
             }
         } else {
             setMode("Light")
+            themeColorMeta.setAttribute('content', "#ffffff");
             document.getElementsByClassName("bm-burger-bars")[0].style.background = "black"
             document.getElementById("page-wrap").style.background = "white"
             document.getElementById("navbar").style.background = "white"
