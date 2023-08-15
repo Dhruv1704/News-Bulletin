@@ -44,6 +44,7 @@ const News = (props) => {
         setArticles(parsedData.articles)
         setTotalResults(parsedData.totalResults)
         props.changeProgress(100)
+        document.body.style.background = "#444"
     }
 
     const fetchMoreData = async () => {

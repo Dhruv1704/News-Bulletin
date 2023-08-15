@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
     -webkit-tap-highlight-color: transparent;
-    background-color: #444;
 }
 /*for burger menu to make unscrollable*/
 html, body{
