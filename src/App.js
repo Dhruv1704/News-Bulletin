@@ -80,45 +80,43 @@ const App = () => {
                         <Route exact path="/"
                                element={<News changeProgress={changeProgress} key={`${country} general`}
                                               category={"general"}
-                                              mode={mode} toggleMode={toggleMode}
-                                              country={"in"} changeCountry={changeCountry}
+                                              country={"in"}
                                               pageSize={pageSize}/>}/>
                         <Route exact path={`/${country}/business`}
                                element={<News changeProgress={changeProgress} key={`${country} business`}
-                                              category={"business"} mode={mode} toggleMode={toggleMode}
-                                              country={country} changeCountry={changeCountry}
+                                              category={"business"}
+                                              country={country}
                                               pageSize={pageSize}/>}/>
                         <Route exact path={`/${country}/entertainment`}
                                element={<News changeProgress={changeProgress} key={`${country} entertainment`}
-                                              category={"entertainment"} mode={mode} toggleMode={toggleMode}
-                                              country={country} changeCountry={changeCountry}
+                                              category={"entertainment"}
+                                              country={country}
                                               pageSize={pageSize}/>}/>
                         <Route exact path={`/${country}/general`}
                                element={<News changeProgress={changeProgress} key={`${country} general`}
                                               category={"general"}
-                                              mode={mode} toggleMode={toggleMode}
-                                              country={country} changeCountry={changeCountry} pageSize={pageSize}/>}/>
+
+                                              country={country} pageSize={pageSize}/>}/>
                         <Route exact path={`/${country}/health`}
                                element={<News changeProgress={changeProgress} key={`${country} health`}
                                               category={"health"}
-                                              mode={mode} toggleMode={toggleMode}
-                                              country={country} changeCountry={changeCountry}
+                                              country={country}
                                               pageSize={pageSize}/>}/>
                         <Route exact path={`/${country}/science`}
                                element={<News changeProgress={changeProgress} key={`${country} science`}
-                                              category={"science"} mode={mode} toggleMode={toggleMode}
-                                              country={country} changeCountry={changeCountry}
+                                              category={"science"}
+                                              country={country}
                                               pageSize={pageSize}/>}/>
                         <Route exact path={`/${country}/sports`}
                                element={<News changeProgress={changeProgress} key={`${country} sports`}
                                               category={"sports"}
-                                              mode={mode} toggleMode={toggleMode}
-                                              country={country} changeCountry={changeCountry}
+
+                                              country={country}
                                               pageSize={pageSize}/>}/>
                         <Route exact path={`/${country}/technology`}
                                element={<News changeProgress={changeProgress} key={`${country} technology`}
-                                              category={"technology"} mode={mode} toggleMode={toggleMode}
-                                              country={country} changeCountry={changeCountry}
+                                              category={"technology"}
+                                              country={country}
                                               pageSize={pageSize}/>}/>
                     </Routes>
                 </main>

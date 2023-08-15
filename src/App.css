@@ -71,6 +71,10 @@ li {
     cursor: pointer;
 }
 
+.button:active{
+    transform: scale(0.95);
+}
+
 .button:hover{
     background-position: left bottom;
 }
@@ -117,26 +121,6 @@ li {
 }
 
 
-.dark-btn {
-    margin-right: 1em;
-    padding: 0.5em;
-    background: #2c2f31;
-    border: 2px solid #5fd9fb;
-    color: #5fd9fb;
-    border-radius: 6px;
-    cursor: pointer;
-    user-select: none;
-    font-size: 1rem;
-}
-
-.dark-btn:hover {
-    background: #5fd9fb;
-    color: white;
-}
-
-.dark-btn:active {
-    transform: scale(1.1);
-}
 
 .heading{
     text-align: center;
@@ -202,47 +186,11 @@ li {
     text-align: center;
 }
 
-#menu-button {
-    height: 60px;
-    width: 70px;
-    position: fixed;
-    bottom: 10px;
-    right: 30px;
-    background: #1a1c22;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-#menu-text {
-    position: absolute;
-    bottom: 20px;
-    right: 14px;
-    color: #5fd9fb;
-    font-weight: bold;
-    text-decoration: none;
-    user-select: none;
-}
-
-#menu {
-    padding-left: 1.5em;
-    font-size: 1.25rem;
-    display: none;
-    height: 92vh;
-    background: #f7f7f7;
-}
-
 h3 {
     margin-top: 0;
     padding-top: 1.5em;
 }
 
-.dark {
-    background: #1d1f20 !important;
-}
-
-.dark-font-color {
-    color: white;
-}
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -359,25 +307,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
     }
 }
 
-
-@media screen and (min-width: 1053px) {
-    #menu-button {
-        display: none;
-    }
-
-    #news-div {
-        display: block !important;
-    }
-
-    #menu {
-        display: block !important;
-        position: fixed;
-        right: 0;
-        left: 80%;
-        /*height: 99vh;*/
-    }
-}
-
 /*problems
 1)flex box space around for 2 news card
 2)// duplicate problem due to setState is asynchronous  this.setState{page : this.state.page+1}
@@ -385,7 +314,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 problem here infinte api calls as useEffect runs multiple times, use [] to solve.  imp
 4)react router exact path.
 5)react router key(change component) not updating the props(same News component instead of 'about' component in textutilts)problem here infinte api calls as useEffect runs multiple times, use [] to solve.  imp
-6) CSS media query menu display block !important. in mobile form after menu open then close resizing to desktop size the menu display remains none.
+6) react burger menu scacle rotate height 100vh issue, when 100vh additional news does not load (infinite scroll). Fixed by handleOpen handleClose on menu component.
 
 1)dark mode css
 2)title logo*/

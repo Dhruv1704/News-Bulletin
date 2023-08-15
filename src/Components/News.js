@@ -67,20 +67,6 @@ const News = (props) => {
         setArticles(articles.concat(parsedData.articles))
     }
 
-    const showMenu = () => {
-        const news = document.getElementById('news-div')
-        const menu = document.getElementById('menu')
-        const menuText = document.getElementById('menu-text')
-        if (news.style.display === "block") {
-            news.style.display = "none";
-            menu.style.display = "block";
-            menuText.textContent = "Close"
-        } else {
-            menu.style.display = "none";
-            news.style.display = "block";
-            menuText.textContent = "Menu"
-        }
-    }
 
     const countryName = (element) => {
         switch (element) {
@@ -126,11 +112,6 @@ const News = (props) => {
                     }) : ""}
                 </div>
             </InfiniteScroll>
-            {/*</div>*/}
-            {/*<div id={"menu-button"} onClick={showMenu}>*/}
-            {/*    <span id={"menu-text"}>Menu1</span>*/}
-            {/*</div>*/}
-            {/*<Menu1 country={props.country} mode={props.mode} changeCountry={props.changeCountry}/>*/}
         </div>
     );
 }
