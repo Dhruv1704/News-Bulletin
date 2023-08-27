@@ -27,25 +27,15 @@ const App = () => {
 
     const toggleMode = () => {
         const themeColorMeta = document.getElementById('theme-color');
-        const cards = document.getElementsByClassName("card");
         const menuBars = document.getElementsByClassName("bm-burger-bars")
-        const btn = document.getElementsByClassName("button")
-        const btnText = document.getElementsByClassName("text")
         if (mode === "Light") {
             setMode("Dark")
             themeColorMeta.setAttribute('content', "#000000");
             document.getElementById("page-wrap").style.background = "#181a1b"
             document.getElementById("navbar").style.background = "black"
             document.body.style.color = "white"
-            for (const card of cards) {
-                card.style.background = "black"
-            }
             for (const menuBar of menuBars) {
                 menuBar.style.background = "white"
-            }
-            for (let i = 0; i < btn.length; i++) {
-                btn[i].classList.add("dark-button")
-                btnText[i].classList.add("dark-text")
             }
         } else {
             setMode("Light")
@@ -54,15 +44,8 @@ const App = () => {
             document.getElementById("page-wrap").style.background = "white"
             document.getElementById("navbar").style.background = "white"
             document.body.style.color = "black"
-            for (const card of cards) {
-                card.style.background = "white"
-            }
             for (const menuBar of menuBars) {
                 menuBar.style.background = "black"
-            }
-            for (let i = 0; i < btn.length; i++) {
-                btn[i].classList.remove("dark-button")
-                btnText[i].classList.remove("dark-text")
             }
         }
     }
@@ -84,43 +67,41 @@ const App = () => {
                                element={<News changeProgress={changeProgress} key={`${country} general`}
                                               category={"general"}
                                               country={"in"}
-                                              pageSize={pageSize}/>}/>
+                                              pageSize={pageSize} mode={mode}/>}/>
                         <Route exact path={`/${country}/business`}
                                element={<News changeProgress={changeProgress} key={`${country} business`}
                                               category={"business"}
                                               country={country}
-                                              pageSize={pageSize}/>}/>
+                                              pageSize={pageSize} mode={mode}/>}/>
                         <Route exact path={`/${country}/entertainment`}
                                element={<News changeProgress={changeProgress} key={`${country} entertainment`}
                                               category={"entertainment"}
                                               country={country}
-                                              pageSize={pageSize}/>}/>
+                                              pageSize={pageSize} mode={mode}/>}/>
                         <Route exact path={`/${country}/general`}
                                element={<News changeProgress={changeProgress} key={`${country} general`}
                                               category={"general"}
-
-                                              country={country} pageSize={pageSize}/>}/>
+                                              country={country} pageSize={pageSize} mode={mode}/>}/>
                         <Route exact path={`/${country}/health`}
                                element={<News changeProgress={changeProgress} key={`${country} health`}
                                               category={"health"}
                                               country={country}
-                                              pageSize={pageSize}/>}/>
+                                              pageSize={pageSize} mode={mode}/>}/>
                         <Route exact path={`/${country}/science`}
                                element={<News changeProgress={changeProgress} key={`${country} science`}
                                               category={"science"}
                                               country={country}
-                                              pageSize={pageSize}/>}/>
+                                              pageSize={pageSize} mode={mode}/>}/>
                         <Route exact path={`/${country}/sports`}
                                element={<News changeProgress={changeProgress} key={`${country} sports`}
                                               category={"sports"}
-
                                               country={country}
-                                              pageSize={pageSize}/>}/>
+                                              pageSize={pageSize} mode={mode}/>}/>
                         <Route exact path={`/${country}/technology`}
                                element={<News changeProgress={changeProgress} key={`${country} technology`}
                                               category={"technology"}
                                               country={country}
-                                              pageSize={pageSize}/>}/>
+                                              pageSize={pageSize} mode={mode}/>}/>
                     </Routes>
                 </main>
             </BrowserRouter>

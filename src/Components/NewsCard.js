@@ -1,9 +1,9 @@
 import React from 'react';
 
 const NewsCard = (props) => {
-    let {title, description, img, url, author, date} = props
+    let {title, description, img, url, author, date, mode} = props
     return (
-        <div className={"card"}>
+        <div className={`card ${mode==="Dark"?"card-dark":"card-light"}`}>
             <div className={"img-div"}>
                 <img src={img} alt={"..."} className={"img"}/>
             </div>
@@ -13,8 +13,8 @@ const NewsCard = (props) => {
                     <p>{description ? description : "..."}</p>
                     <p><small>By {author ? author : "unknown"} on {new Date(date).toGMTString()}</small></p>
                 </div>
-                <button className="button active:scale-95" id="add_button">
-                    <a className={"text"} href={url} target={"_blank"} rel={"noreferrer"}>Read More</a>
+                <button className={`${mode==="Dark"?"dark-button":"button"} active:scale-95`}>
+                    <a className={`${mode==="Dark"?"dark-text":"text"}`} href={url} target={"_blank"} rel={"noreferrer"}>Read More</a>
                 </button>
             </div>
         </div>

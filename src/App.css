@@ -64,6 +64,7 @@ li {
     border-radius: 6px;
     display: block;
     width: 7.4em;
+    padding: 0.5em 0;
     background: linear-gradient(to right, black 50%, white 50%) right bottom;
     background-size: 200% 100%;
     transition: background-position .5s ease-out;
@@ -82,7 +83,6 @@ li {
     text-decoration: none;
     text-align: center;
     font-weight: 700;
-    padding: 0.5em 0;
     color: black;
     transition: all .6s ease-out;
     display: block;
@@ -99,10 +99,15 @@ li {
     border-radius: 6px;
     display: block;
     width: 7.4em;
+    padding: 0.5em 0;
     background: linear-gradient(to right, white 50%, black 50%) right bottom;
     background-size: 200% 100%;
     transition: background-position .5s ease-out;
     cursor: pointer;
+}
+
+.dark-button:hover{
+    background-position: left bottom;
 }
 
 .dark-text{
@@ -110,7 +115,6 @@ li {
     text-decoration: none;
     text-align: center;
     font-weight: 700;
-    padding: 0.5em 0;
     transition: all .6s ease-out;
     display: block;
 }
@@ -136,6 +140,14 @@ li {
     overflow: hidden;
     width: 325px;
     transition: transform 0.5s;
+}
+
+.card-light{
+    background-color: white;
+}
+
+.card-dark{
+    background-color: black;
 }
 
 .card:hover {

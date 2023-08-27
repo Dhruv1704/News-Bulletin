@@ -109,7 +109,7 @@ const News = (props) => {
                                          key={index}
                                          img={!element.urlToImage ? "https://cdn.telanganatoday.com/wp-content/uploads/2022/08/iPhone-14-Pro-models-likely-to-come-with-new-ultra-wide-camera.jpg" : element.urlToImage}
                                          url={element.url} author={element.author}
-                                         date={element.publishedAt}/>
+                                         date={element.publishedAt} mode={props.mode}/>
                     }) : ""}
                 </div>
             </InfiniteScroll>
