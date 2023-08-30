@@ -102,7 +102,7 @@ const News = (props) => {
             >
                 <div className={"row"}>
                     {articles !== undefined && articles.length !== 0 ? articles.map((element, index) => {
-                        return <NewsCard title={element.title.length>100?element.title.slice(0,100)+"...":element.title}
+                        return <NewsCard title={element.title===null?"Title":element.title.length>100?element.title.slice(0,100)+"...":element.title}
                                          description={element.content != null ?
                                              element.content.length>150?element.content.slice(0, 150)+"...":element.content.slice(0, -14)
                                              : element.description + "..."}

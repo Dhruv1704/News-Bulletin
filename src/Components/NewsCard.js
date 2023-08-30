@@ -13,9 +13,9 @@ const NewsCard = (props) => {
                     <p>{description ? description : "..."}</p>
                     <p><small>By {author ? author : "unknown"} on {new Date(date).toGMTString()}</small></p>
                 </div>
-                <button className={`${mode==="Dark"?"dark-button":"button"} active:scale-95`}>
+                <div className={`${mode==="Dark"?"dark-button":"button"} active:scale-95`}>
                     <a className={`${mode==="Dark"?"dark-text":"text"}`} href={url} target={"_blank"} rel={"noreferrer"}>Read More</a>
-                </button>
+                </div>
             </div>
         </div>
     );
