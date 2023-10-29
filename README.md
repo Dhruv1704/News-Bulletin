@@ -1,3 +1,6 @@
+# Link for Backend which handles caching using Redis
+https://github.com/Dhruv1704/NewsAPI
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
